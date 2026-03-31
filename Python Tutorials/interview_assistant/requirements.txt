@@ -1,0 +1,24 @@
+# ── Core AI ─────────────────────────────────────────────────────────────────
+anthropic>=0.28.0          # Claude (Anthropic) — primary AI provider
+openai>=1.30.0             # GPT-4o — optional fallback provider
+
+# ── Speech-to-Text ───────────────────────────────────────────────────────────
+SpeechRecognition>=3.10.4  # Google STT wrapper (default, free, needs internet)
+pyaudio>=0.2.14            # Microphone access (pip install pyaudio)
+                           # Windows:  pip install pipwin && pipwin install pyaudio
+                           # macOS:    brew install portaudio && pip install pyaudio
+                           # Ubuntu:   sudo apt install portaudio19-dev python3-pyaudio
+
+# ── Whisper (optional — local offline STT) ───────────────────────────────────
+# Uncomment the lines below if you prefer offline transcription:
+# openai-whisper>=20231117
+# numpy>=1.24
+# soundfile>=0.12
+
+# ── macOS screen-share exclusion (optional) ──────────────────────────────────
+# Uncomment on macOS to enable native window capture exclusion:
+# pyobjc-framework-Cocoa>=10.0
+
+# ── Tkinter ──────────────────────────────────────────────────────────────────
+# Tkinter is bundled with Python on Windows and macOS.
+# Ubuntu/Debian:  sudo apt install python3-tk
